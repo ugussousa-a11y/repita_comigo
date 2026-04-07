@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Exercicio 7</title>
+</head>
+<body>
+    <script>
+        // 1. Criamos as variáveis de controle
+let somaNotas = 0;
+let contador = 1;
+let totalDeNotas = 6;
+
+// 2. Criamos o loop principal para ler as 6 notas
+while (contador <= totalDeNotas) {
+    
+    // 3. Lemos a nota atual
+    let nota = parseFloat(prompt("Informe a nota " + contador + " (de 0 a 10):"));
+
+    // 4. Validação: Enquanto a nota for inválida, pedimos novamente
+    // A nota é inválida se for menor que 0 OU maior que 10
+    while (nota < 0 || nota > 10 || isNaN(nota)) {
+        alert("Valor inválido! A nota deve estar entre 0 e 10.");
+        nota = parseFloat(prompt("Informe novamente a nota " + contador + ":"));
+    }
+
+    // 5. Se chegou aqui, a nota é válida. Somamos ao total e passamos para a próxima.
+    somaNotas = somaNotas + nota;
+    contador++;
+}
+
+// 6. Calculamos a média final
+let mediaFinal = somaNotas / totalDeNotas;
+
+// 7. Exibimos o resultado na tela
+document.write("<h2>Resultado Final</h2>");
+document.write("A soma das notas é: " + somaNotas.toFixed(2) + "<br>");
+document.write("A média simples do aluno é: " + mediaFinal.toFixed(2));
+    </script>
+</body>
+</html>

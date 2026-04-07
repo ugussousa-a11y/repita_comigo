@@ -3,28 +3,35 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> Cálculando IMC</title>
+    <title> Exercicio 1</title>
 </head>
 <body>
-   <h1>Calculando o Índice de Massa Corporal (IMC) usando JavaScript</h1>
 
     <script>
         
-        let peso = parseFloat(prompt("Digite seu peso em kg:"))
-        let altura = parseFloat(prompt("Digite sua altura:"))
+        // 1. Lemos o primeiro valor informado pelo usuário.
+// O parseFloat é usado para converter o texto digitado em um número (podendo ser decimal).
+let primeiroValor = parseFloat(prompt("Informe o primeiro valor:"));
 
-        let imc = peso / (altura * altura)
-        document.write("Seu IMC é: " + imc.toFixed(2))
+// 2. Lemos o segundo valor.
+let segundoValor = parseFloat(prompt("Informe o segundo valor:"));
 
-        if (imc < 18.5) {
-            alert("Você está abaixo do peso.")
-        } else if (imc >= 18.5 && imc < 25) {
-            alert("Você está com o peso normal.")
-        } else if (imc >= 25 && imc < 30) {
-            alert("Você está com sobrepeso.")
-        } else {
-            alert("Você está com obesidade.")
-        }
+// 3. Criamos a regra de repetição. 
+// "Enquanto o segundoValor for menor ou igual a ZERO, faça..."
+while (segundoValor <= 0) {
+    // Avisa o usuário sobre o erro
+    alert("Valor inválido! O segundo valor não pode ser zero ou negativo.");
+    
+    // Pede para o usuário digitar um novo valor para a variável
+    segundoValor = parseFloat(prompt("Informe um novo valor válido para o segundo número:"));
+}
+
+// 4. Se o código chegou até aqui, significa que o segundoValor é maior que zero.
+// Agora podemos fazer a divisão com segurança.
+let resultado = primeiroValor / segundoValor;
+
+// 5. Imprimimos o resultado na tela (ou no console).
+alert("O resultado da divisão de " + primeiroValor + " por " + segundoValor + " é: " + resultado);
 
 </script>
 

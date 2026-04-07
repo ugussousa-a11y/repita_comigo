@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Exercicio 10</title>
+</head>
+<body>
+    <script>
+        // 1. Lemos o valor de N informado pelo usuário
+let n = parseInt(prompt("Até qual tabuada você deseja imprimir?"));
+
+// 2. O primeiro loop (externo) controla qual tabuada está sendo feita
+let i = 1; 
+while (i <= n) {
+    
+    document.write("<h4>Tabuada do " + i + "</h4>");
+    
+    // 3. O segundo loop (interno) faz a multiplicação de 1 a 10
+    let j = 1;
+    while (j <= 10) {
+        let resultado = i * j;
+        
+        // Imprime a linha da tabuada: ex: 1 x 5 = 5
+        document.write(i + " x " + j + " = " + resultado + "<br>");
+        
+        j++; // Incrementa o multiplicador
+    }
+    
+    // Pula uma linha entre as tabuadas para organizar
+    document.write("<hr>"); 
+    
+    i++; // Passa para a próxima tabuada
+}
+    </script>
+</body>
+</html>

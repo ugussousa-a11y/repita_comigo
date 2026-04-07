@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Exercicio 11</title>
+</head>
+<body>
+    <script>
+        // 1. Criamos as variáveis para contar os números dentro e fora do intervalo
+let dentroIntervalo = 0;
+let foraIntervalo = 0;
+
+// 2. Criamos um contador para controlar o loop de 10 repetições
+let contador = 1;
+
+// 3. O loop rodará até que 10 valores sejam lidos
+while (contador <= 10) {
+    
+    // 4. Lemos o valor do usuário
+    let valor = parseFloat(prompt("Informe o " + contador + "º valor:"));
+
+    // 5. Verificamos se o valor está entre 24 e 42 (inclusive)
+    // Usamos o operador lógico && (E) para verificar as duas condições ao mesmo tempo
+    if (valor >= 24 && valor <= 42) {
+        dentroIntervalo++; // Aumenta o contador de "dentro"
+    } else {
+        foraIntervalo++;   // Aumenta o contador de "fora"
+    }
+
+    // 6. Incrementamos o contador do loop
+    contador++;
+}
+
+// 7. Exibimos os resultados finais na tela
+document.write("<h3>Resultado da Análise:</h3>");
+document.write("Valores entre 24 e 42: " + dentroIntervalo + "<br>");
+document.write("Valores fora do intervalo: " + foraIntervalo);
+    </script>
+</body>
+</html>

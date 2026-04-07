@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Exercicio 4</title>
+</head>
+<body>
+    <script>
+        // 1. Criamos variáveis para acumular a soma e contar quantos números existem
+let soma = 0;
+let quantidade = 0;
+
+// 2. Iniciamos o contador no valor inicial (15)
+let contador = 15;
+
+// 3. Criamos o loop que vai do 15 até o 100
+while (contador <= 100) {
+    // Adicionamos o valor atual do contador à nossa soma total
+    soma = soma + contador;
+    
+    // Incrementamos a quantidade de números processados
+    quantidade++;
+    
+    // Passamos para o próximo número
+    contador++;
+}
+
+// 4. Calculamos a média aritmética (Soma total dividida pela quantidade)
+let media = soma / quantidade;
+
+// 5. Exibimos o resultado
+document.write("A soma total é: " + soma + "<br>");
+document.write("A quantidade de números entre 15 e 100 é: " + quantidade + "<br>");
+document.write("A média aritmética é: " + media);
+    </script>
+</body>
+</html>

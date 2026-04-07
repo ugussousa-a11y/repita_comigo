@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Exercicio 8</title>
+</head>
+<body>
+    <script>
+        // 1. Lemos o valor de N informado pelo usuário
+// O enunciado garante que N será sempre maior que ZERO.
+let n = parseInt(prompt("Informe um valor para N (limite da contagem):"));
+
+// 2. Iniciamos o nosso contador em 1 (inclusive)
+let contador = 1;
+
+// 3. Criamos o loop que vai de 1 até o valor de N
+// A condição "contador <= n" garante que o N também seja impresso (inclusive)
+while (contador <= n) {
+    
+    // 4. Imprimimos o valor atual do contador
+    document.write(contador);
+
+    // 5. Estética: Adicionamos uma vírgula entre os números, menos no último
+    if (contador < n) {
+        document.write(", ");
+    } else {
+        document.write("."); // Ponto final quando chegar no N
+    }
+
+    // 6. Incrementamos o contador para a próxima volta
+    contador++;
+}
+    </script>
+</body>
+</html>

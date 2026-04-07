@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Exercicio 6</title>
+</head>
+<body>
+    <script>
+        // 1. Criamos uma variável para contar quantos alunos foram aprovados
+let aprovados = 0;
+
+// 2. Criamos uma variável para controlar se o programa continua rodando
+let continuar = "S";
+
+// 3. O loop principal: enquanto a resposta for "S" (ou "s")
+while (continuar.toUpperCase() === "S") {
+    
+    // 4. Lemos as duas notas do aluno atual
+    let nota1 = parseFloat(prompt("Informe a primeira nota:"));
+    let nota2 = parseFloat(prompt("Informe a segunda nota:"));
+    
+    // 5. Calculamos a média
+    let media = (nota1 + nota2) / 2;
+    
+    // 6. Verificamos se foi aprovado (nota >= 9.5)
+    if (media >= 9.5) {
+        aprovados++; // Se sim, aumentamos o contador de aprovados
+        alert("Média: " + media.toFixed(1) + " - Aluno APROVADO!");
+    } else {
+        alert("Média: " + media.toFixed(1) + " - Aluno REPROVADO.");
+    }
+    
+    // 7. Perguntamos se o usuário quer processar outro aluno
+    continuar = prompt("Calcular a média de outro aluno? (S/N)");
+}
+
+// 8. Quando o usuário digitar "N", o loop acaba e mostramos o total
+document.write("<h3>Programa Encerrado</h3>");
+document.write("Total de alunos aprovados: " + aprovados);
+    </script>
+</body>
+</html>
